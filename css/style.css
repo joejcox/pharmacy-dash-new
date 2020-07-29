@@ -238,6 +238,13 @@ td {
   width: 25%;
 }
 
+#users-table td {
+  width: 22%;
+}
+#users-table td:nth-child(4) {
+  width: 30%;
+}
+
 .user-filter-search,
 .user-filter-role,
 .user-filter-sort {

@@ -1,16 +1,22 @@
 <?php
 
-if (isset($_POST['edit-role'])) {
+if (isset($_POST["edit-role"])) {
 
     require "../includes/dbh.php";
 
-    $userId = $_POST['id'];
-    $userRole = $_POST['user-role'];
+    $userId = $_POST["id"];
+    $userRole = $_POST["user-role"];
 
+    $sql = "SELECT * FROM users WHERE idUsers=?";
 
-    $sql = "SELECT idUsers FROM users WHERE idUsers=?";
+    
 
     $stmt = mysqli_stmt_init($conn);
+    $rows = mysqli_num_rows($sql);
+
+   
+        
+
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location: ./?error=sqlnoprepare");
@@ -43,7 +49,9 @@ if (isset($_POST['edit-role'])) {
                 exit();
             }
         }
-    }
+
+    
+}
 } else {
     header("Location: /");
     exit();
