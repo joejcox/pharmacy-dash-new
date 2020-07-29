@@ -16,7 +16,7 @@ if (isset($_POST['edit-role'])) {
         header("Location: ./?error=sqlnoprepare");
         exit();
     }
-    get the user and remove it 
+    // get the user and remove it 
     else {
         mysqli_stmt_bind_param($stmt, "s", $userId);
         mysqli_stmt_execute($stmt);
