@@ -1,0 +1,2 @@
+<!-- <a href="/dashboard/users/register.php" class="button is-link"><i class="fas fa-plus"></i> Add New User</a> -->
+<button class="button is-link" id="add-user-button"><i class="fas fa-plus"></i> Add New User</button>
